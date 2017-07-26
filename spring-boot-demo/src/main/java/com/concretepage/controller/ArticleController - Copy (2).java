@@ -21,8 +21,7 @@ import com.concretepage.service.IArticleService;
 @Controller
 @RequestMapping("user")
 public class ArticleController {
-	@Autowired
-	private IArticleService articleService;
+	
 	@GetMapping("article/{id}")
 	public ResponseEntity<Article> getArticleById(@PathVariable("id") Integer id) {
 		Article article = articleService.getArticleById(id);
